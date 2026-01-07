@@ -247,8 +247,6 @@ IMAGE_VERSION:  3.18.0.0
 
 FAILURE_ID_HASH:  {259a0c43-5140-5e12-e7c1-08b76d9f11b2}
 
-Followup:     MachineOwner
----------
 
 0:000> !heap -p -a 06724ff8
     address 06724ff8 found in
