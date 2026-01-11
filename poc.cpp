@@ -16,9 +16,9 @@ int main(int argc, char* argv[]) {
     std::cout << "[*] FreeImage Version: " << FreeImage_GetVersion() << std::endl;
 
     std::cout << "[*] 2. Attempting to load malformed TGA: " << filename << std::endl;
-
+    auto fif = FreeImage_GetFileType(filename, 0);
     //path: FreeImage_Load -> PluginTARGA::Load -> loadRLE (fail & free) -> FreeImage_FlipVertical (CRASH)
-    FIBITMAP* dib = FreeImage_Load(FIF_TARGA, filename, 0);
+    FIBITMAP* dib = FreeImage_Load(fif, filename, 0);
 
     if (dib) {
         std::cout << "[-] Failed to crash. The image loaded (or handled) unexpectedly." << std::endl;
