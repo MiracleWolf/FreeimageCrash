@@ -61,26 +61,38 @@ Windbg result:
 
 0:000> g
 ModLoad: 10000000 107df000   C:\Users\Administrator\source\repos\Freeimage_test\Release\FreeImaged.dll
+
 ModLoad: 764f0000 76551000   C:\WINDOWS\SysWOW64\WS2_32.dll
+
 ModLoad: 758e0000 7599c000   C:\WINDOWS\SysWOW64\RPCRT4.dll
+
 (2714.3218): Access violation - code c0000005 (first chance)
+
 First chance exceptions are reported before any exception handling.
+
 This exception may be expected and handled.
+
 *** WARNING: Unable to verify checksum for C:\Users\Administrator\source\repos\Freeimage_test\Release\FreeImaged.dll
+
 eax=06700ff8 ebx=058f0f70 ecx=00000000 edx=00030000 esi=0019f30c edi=0019f300
+
 eip=1000caf5 esp=0019f104 ebp=0019f1d4 iopl=0         nv up ei pl nz na po nc
+
 cs=0023  ss=002b  ds=002b  es=002b  fs=0053  gs=002b             efl=00010202
+
 FreeImaged!FreeImage_HasPixels+0x15:
+
 1000caf5 8b08            mov     ecx,dword ptr [eax]  ds:002b:06700ff8=????????
 0:000> !analyze -v
+
 Reloading current modules
 *** WARNING: Unable to verify checksum for C:\Users\Administrator\source\repos\Freeimage_test\Release\FreeImaged.dll
 
-*******************************************************************************
-*                                                                             *
-*                        Exception Analysis                                   *
-*                                                                             *
-*******************************************************************************
+
+                                                                          
+                       Exception Analysis                                  
+                                                                             
+
 
 *** WARNING: Unable to verify checksum for Freeimage_test.exe
 
@@ -190,16 +202,27 @@ EXCEPTION_PARAMETER2:  06700ff8
 
 STACK_TEXT:  
 0019f1d4 100aa414     06700ff8 0019fcd4 0019f30c FreeImaged!FreeImage_HasPixels+0x15
+
 0019f300 10050c91     06700ff8 ec33d474 0019fdf0 FreeImaged!FreeImage_FlipVertical+0x24
+
 0019fce4 10019bb8     0019fef0 066f0fc0 ffffffff FreeImaged!Load+0x1121
+
 0019fdf0 10019c56     00000011 0019fef0 066f0fc0 FreeImaged!FreeImage_LoadFromHandle+0x88
+
 0019ff04 00401223     00000011 058f0f70 00000000 FreeImaged!FreeImage_LoadU+0x56
+
 (Inline) --------     -------- -------- -------- Freeimage_test!FreeImage_test+0x13
+
 0019ff2c 00401865     00000002 058ecf58 057a9ef0 Freeimage_test!main+0x1d3
+
 (Inline) --------     -------- -------- -------- Freeimage_test!invoke_main+0x1c
+
 0019ff74 76405d49     0024e000 76405d30 0019ffdc Freeimage_test!__scrt_common_main_seh+0xfa
+
 0019ff84 77cbd5db     0024e000 071251de 00000000 KERNEL32!BaseThreadInitThunk+0x19
+
 0019ffdc 77cbd561     ffffffff 77d044c7 00000000 ntdll!__RtlUserThreadStart+0x2b
+
 0019ffec 00000000     004018ed 0024e000 00000000 ntdll!_RtlUserThreadStart+0x1b
 
 
