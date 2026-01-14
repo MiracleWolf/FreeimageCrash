@@ -58,6 +58,7 @@ The vulnerability is caused by a "pass-by-value" pointer issue in the helper fun
 When compiled with Debug flags, the application crashes with an Access Violation reading specific debug fill patterns 
 
 Windbg result:
+
 0:000> g
 ModLoad: 10000000 107df000   C:\Users\Administrator\source\repos\Freeimage_test\Release\FreeImaged.dll
 ModLoad: 764f0000 76551000   C:\WINDOWS\SysWOW64\WS2_32.dll
@@ -73,8 +74,8 @@ FreeImaged!FreeImage_HasPixels+0x15:
 1000caf5 8b08            mov     ecx,dword ptr [eax]  ds:002b:06700ff8=????????
 0:000> !analyze -v
 Reloading current modules
-..*** WARNING: Unable to verify checksum for C:\Users\Administrator\source\repos\Freeimage_test\Release\FreeImaged.dll
-.........
+*** WARNING: Unable to verify checksum for C:\Users\Administrator\source\repos\Freeimage_test\Release\FreeImaged.dll
+
 *******************************************************************************
 *                                                                             *
 *                        Exception Analysis                                   *
