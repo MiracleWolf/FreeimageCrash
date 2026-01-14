@@ -53,11 +53,16 @@ The vulnerability is caused by a "pass-by-value" pointer issue in the helper fun
 * **OS**: Windows 11 x64
 * **Compiler**: MSVC (Visual Studio 2019)
 * **Library Build**: FreeImage 3.18.0 (Debug&Release)
+
 ###Impact Escalation Analysis
+
 While the immediate impact is a Denial of Service (crash) due to accessing freed memory, the vulnerability technically constitutes a Use-After-Free primitive that allows Arbitrary Memory Write.
+
 1.Control over FIBITMAP structure: If an attacker can manipulate the heap layout (e.g., in a multi-threaded environment or via JavaScript in a browser context) to reallocate the freed FIBITMAP struct before the reuse, they can supply a fake object.
+
 2.Arbitrary Write via FlipVertical: By controlling the internal data pointer of the fake FIBITMAP object, the subsequent call to FreeImage_FlipVertical will perform write operations (pixel swapping) on attacker-controlled memory addresses.
 3.RCE Potential: This primitive can be leveraged to overwrite function pointers or return addresses, leading to Remote Code Execution (RCE)
+
 ### Crash Evidence
 When compiled with Debug flags, the application crashes with an Access Violation reading specific debug fill patterns 
 
