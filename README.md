@@ -273,29 +273,54 @@ FAILURE_ID_HASH:  {259a0c43-5140-5e12-e7c1-08b76d9f11b2}
 
 
 0:000> !heap -p -a 06724ff8
+
     address 06724ff8 found in
+    
     _DPH_HEAP_ROOT @ 3d71000
+    
     in free-ed allocation (  DPH_HEAP_BLOCK:         VirtAddr         VirtSize)
+    
                                     65c29c0:          6724000             2000
+                                    
     7924b162 verifier!AVrfDebugPageHeapFree+0x000000c2
+    
     77d44f09 ntdll!RtlDebugFreeHeap+0x0000003e
+    
     77c9fda6 ntdll!RtlpFreeHeap+0x000000d6
+    
     77ce2092 ntdll!RtlpFreeNTHeapInternal+0x000006b5
+    
     77c8ecaa ntdll!RtlFreeHeap+0x000000ca
+    
     104738d7 FreeImaged!_free_base+0x00000027 [minkernel\crts\ucrt\src\appcrt\heap\free_base.cpp @ 105]
+    
     1044d1b6 FreeImaged!free_dbg_nolock+0x000004f6 [minkernel\crts\ucrt\src\appcrt\heap\debug_heap.cpp @ 1001]
+    
     1044bc6c FreeImaged!_free_dbg+0x0000007c [minkernel\crts\ucrt\src\appcrt\heap\debug_heap.cpp @ 1030]
+    
     104285ce FreeImaged!operator delete+0x0000000e [D:\a\_work\1\s\src\vctools\crt\vcstartup\src\heap\delete_scalar.cpp @ 34]
+    
     104264bc FreeImaged!operator delete+0x0000000c [D:\a\_work\1\s\src\vctools\crt\vcstartup\src\heap\delete_scalar_size.cpp @ 31]
+    
     10006f2b +0x0000003b
+    
     1000d82c FreeImaged!FreeImage_Unload+0x000001bc [D:\FreeImage\Source\FreeImage\BitmapAccess.cpp @ 520]
+    
     1004ed9d FreeImaged!loadRLE<16>+0x0000010d [D:\FreeImage\Source\FreeImage\PluginTARGA.cpp @ 597]
+    
     10050937 FreeImaged!Load+0x00000dc7 [D:\FreeImage\Source\FreeImage\PluginTARGA.cpp @ 960]
+    
     10019bb8 FreeImaged!FreeImage_LoadFromHandle+0x00000088 [D:\FreeImage\Source\FreeImage\Plugin.cpp @ 388]
+    
     10019c56 FreeImaged!FreeImage_LoadU+0x00000056 [D:\FreeImage\Source\FreeImage\Plugin.cpp @ 428]
+    
     00401223 Freeimage_test!main+0x000001d3 [C:\Users\Administrator\source\repos\Freeimage_test\main.cpp @ 142]
+    
     00401865 Freeimage_test!__scrt_common_main_seh+0x000000fa [D:\a\_work\1\s\src\vctools\crt\vcstartup\src\startup\exe_common.inl @ 288]
+    
     76405d49 KERNEL32!BaseThreadInitThunk+0x00000019
+    
     77cbd5db ntdll!__RtlUserThreadStart+0x0000002b
+    
     77cbd561 ntdll!_RtlUserThreadStart+0x0000001b
 
