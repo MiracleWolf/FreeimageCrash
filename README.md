@@ -1,5 +1,4 @@
 # FreeimageCrash
-https://img.shields.io/badge/CVE-2025--70968-Critical-red.svg
 
 crash samples by fuzz
 
