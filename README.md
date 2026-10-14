@@ -1,3 +1,9 @@
+# Discover Information
+Discoverer:lijian Affiliation: B429 Laboratory, School of Cyber Science and Engineering,Wuhan University
+# CVE-2025-70968
+
+
+
 # FreeimageCrash
 
 crash samples by fuzz
